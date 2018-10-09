@@ -195,7 +195,8 @@ with open("text_file.txt", "w") as file:
     file.write("Hello world!")
 
 try:
-    myString = int(input(":"))
+    pass
+        # myString = int(input(":"))
 except TypeError:
     print("Invalid input")
 except Exception as e:
@@ -204,9 +205,12 @@ except Exception as e:
 
 
 
+def argsTest(firstArg, *args):
+    print("First argument", firstArg)
+    for arg in args:
+        print("Another arg from *args", arg)
 
-
-
+argsTest("Hi", "My", "name", "is", "...")
 
 
 
