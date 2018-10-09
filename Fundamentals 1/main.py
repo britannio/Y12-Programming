@@ -205,16 +205,22 @@ except Exception as e:
 
 
 
-def argsTest(firstArg, *args):
-    print("First argument", firstArg)
+def args_test(*args): # multiple arguments can be passed
+
     for arg in args:
         print("Another arg from *args", arg)
 
-argsTest("Hi", "My", "name", "is", "...")
+
+args_test("Hi", "My", "name", "is", "...")
 
 
+def kwargs_test(**kwargs):  # keyworded args, syntax: **x where x is a string
+    if kwargs is not None:
+        for key, value in kwargs.items():
+            print( "%s == %s" % (key, value))
 
 
+kwargs_test(newString="that", keyword="value")
 
 
 
