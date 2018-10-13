@@ -10,7 +10,7 @@ in psuedo code variable assignment is shown with an arrow insead of an
 
 import math
 
-i = 0 # int
+i = 0  # int
 name = "Britannio"
 myFloat = 5.6 # also called a real (real number)
 myChar = "h" # demo char
@@ -154,17 +154,73 @@ print("-----")
 for x in range(10): print([0 for x in range(10)])
 
 
+'''
+subroutine - repeatable code that can be called.
+procedure - subroutine that doesn't return data
+function - subroutine that does return data
+
+len() is an example of a function
+print() is an example of a procedure
+
+language in-built functions are functions that are pre-defined
+
+local variable - only in the defined scope
+global variable - available everywhere
+
+modular programming - breaking code down into subroutines
+
+
+
+C6 - files and exception handling
+
+files can have records, each record having a field.
+Fields can refer to columns of data or an individual piece of data
+'''
+# TODO: learn how to read and write to a text file
+'''
+error handling - catching errors to prevent crashes
+
+'''
+
+print("09/10/2018 \n")
+'''
+
+Dictionaries
+- Holds key and value pairs
+'''
+myDict = {"name":"bob", "age":17, "height-m":"1.6",}
+print(myDict["height-m"])
+
+with open("text_file.txt", "w") as file:
+    file.write("Hello world!")
+
+try:
+    pass
+        # myString = int(input(":"))
+except TypeError:
+    print("Invalid input")
+except Exception as e:
+    print("Exception", str(e))
 
 
 
 
+def args_test(*args): # multiple arguments can be passed
+
+    for arg in args:
+        print("Another arg from *args", arg)
 
 
+args_test("Hi", "My", "name", "is", "...")
 
 
+def kwargs_test(**kwargs):  # keyworded args, syntax: **x where x is a string
+    if kwargs is not None:
+        for key, value in kwargs.items():
+            print( "%s == %s" % (key, value))
 
 
-
+kwargs_test(newString="that", keyword="value")
 
 
 
