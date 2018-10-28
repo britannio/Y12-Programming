@@ -38,7 +38,8 @@ def print_md_array(md_array):
     print(md_array); print()
 
     # printed neatly
-    [print(x) for x in md_array]; print()
+    [print(x) for x in md_array]
+    print()
 
     string = ""
     # pretty printed
